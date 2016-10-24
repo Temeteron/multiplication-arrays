@@ -1,7 +1,4 @@
-#include <stdio.h>
-#include <math.h>
-#include <stdlib.h>  // rand(), srand()
-#include <time.h> 
+#include "libraries.h"
 
 int num_of_elements;
 
