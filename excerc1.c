@@ -2,7 +2,6 @@
 #include <math.h>
 #include <stdlib.h>  // rand(), srand()
 #include <time.h> 
-#define SIZE pow(2,19)
 
 int num_of_elements;
 
