@@ -1,4 +1,4 @@
-# multiplication-arrays
+# multiplication-arrays in C
 Multiplication of 2 arrays with size 2^19 of floats each
 
 Multiply those two arrays with different ways to achieve the best time execution.
