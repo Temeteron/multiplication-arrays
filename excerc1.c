@@ -12,51 +12,64 @@ float calc4 (float a[], float b[]);
 float calc8 (float a[], float b[]);
 float calc16 (float a[], float b[]);
 float calc32 (float a[], float b[]);
+
 // int a[num_of_elements], b[num_of_elements];
 
 int main (int argc, char *argv[]) {
 	// k=1, 2, 4, 8, 16
 	int i;
-	num_of_elements = pow(2,19);
-	float a[num_of_elements], b[num_of_elements];
+	num_of_elements = pow(2, 20);
+	// float a[num_of_elements], b[num_of_elements];
+	// float result = 0;
 	float result = 0;
-	
+	float *a = (float *)malloc(sizeof(float)*num_of_elements);
+	float *b = (float *)malloc(sizeof(float)*num_of_elements);
+
 	// CREATING ELEMENTS FOR A, B
+	// for (i = 0; i < num_of_elements; i++) {
+	//     a[i] = (float)rand();
+	//     b[i] = (float)rand();
+	// }
+
 	for (i = 0; i < num_of_elements; i++) {
 	    a[i] = (float)rand();
 	    b[i] = (float)rand();
 	}
 
-
-	// a * b
+	// a * bs
 	result = calc1 (a, b);
-	// printf("Result of calc1 is: %.2lf\n", result);
 	printf("\n");
+	// printf("Result of calc1 is: %.2lf\n", result);
 		
 	result = calc2 (a, b);
-	// printf("Result of calc2 is: %.2lf\n", result);
 	printf("\n");
+	// printf("Result of calc2 is: %.2lf\n", result);
 
 	result = calc4 (a, b);
-	// printf("Result of calc4 is: %.2lf\n", result);
 	printf("\n");
+	// printf("Result of calc4 is: %.2lf\n", result);
 
 	result = calc8 (a, b);
-	// printf("Result of calc8 is: %.2lf\n", result);
 	printf("\n");
+	// printf("Result of calc8 is: %.2lf\n", result);
 
 	result = calc16 (a, b);
-	// printf("Result of calc16 is: %.2lf\n", result);
 	printf("\n");
+	// printf("Result of calc16 is: %.2lf\n", result);
 
 	result = calc32 (a, b);
-	// printf("Result of calc32 is: %.2lf\n", result);
 	printf("\n");
+	// printf("Result of calc32 is: %.2lf\n", result);
 
 
 	// printf("PAOK\n");
     // printf("a's element is: %d, b's element is: %d\n", a[num_of_elements-1], b[num_of_elements-1]);
+	// printf("Result of a*b is: %.2lf\n", result);
 	printf("Result of a*b is: %.2lf\n", result);
+
+	free(a);
+	free(b);
+
 	return 0;
 }
 
@@ -168,3 +181,4 @@ float calc32 (float a[], float b[]) {
 	return result;
 
 }
+
