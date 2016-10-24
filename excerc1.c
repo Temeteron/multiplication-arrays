@@ -109,7 +109,6 @@ float calc2 (float a[], float b[]) {
 
 }
 
-
 // Step k = 4
 float calc4 (float a[], float b[]) {
 	clock_t begin = clock();
@@ -127,7 +126,6 @@ float calc4 (float a[], float b[]) {
 	return result;
 
 }
-
 
 // Step k = 8
 float calc8 (float a[], float b[]) {
@@ -165,6 +163,7 @@ float calc16 (float a[], float b[]) {
 
 }
 
+//Step k = 32
 float calc32 (float a[], float b[]) {
 	clock_t begin = clock();
 	int j = 0;
