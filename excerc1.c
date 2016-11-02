@@ -5,6 +5,7 @@ int num_of_elements;
 float calc1 (float a[], float b[]);
 float calc2 (float a[], float b[]);
 float calc4 (float a[], float b[]);
+float calc4d2 (float a[], float b[]);
 float calc8 (float a[], float b[]);
 float calc16 (float a[], float b[]);
 float calc32 (float a[], float b[]);
@@ -43,6 +44,10 @@ int main (int argc, char *argv[]) {
 	// printf("Result of calc2 is: %.2lf\n", result);
 
 	result = calc4 (a, b);
+	printf("\n");
+	// printf("Result of calc4 is: %.2lf\n", result);
+
+	result = calc4d2 (a, b);
 	printf("\n");
 	// printf("Result of calc4 is: %.2lf\n", result);
 
@@ -126,6 +131,29 @@ float calc4 (float a[], float b[]) {
 	return result;
 
 }
+
+// Step k = 4 , 2nd way
+float calc4d2 (float a[], float b[]) {
+	clock_t begin = clock();
+	int j = 0;
+	float result = 0, res1, res2, res3, res4;
+
+	while (j < num_of_elements) {
+		res1 = a[j] * b[j];
+		res2 = a[j+1] * b[j+1];
+		res3 = a[j+2] * b[j+2];
+		res4 = a[j+3] * b[j+3];
+		result = result + res1 + res2 + res3 + res4;
+		j = j + 4;
+	}
+
+	clock_t end = clock();
+	double time_spent = (double)(end - begin) / CLOCKS_PER_SEC;
+	printf("Time spent in function CALC4D2: %lf\n", time_spent);
+	return result;
+
+}
+
 
 // Step k = 8
 float calc8 (float a[], float b[]) {
