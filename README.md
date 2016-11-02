@@ -27,7 +27,8 @@ Result
 	So the highest efficiency result for k=16
 
 
-Makefile commands:
+Makefile commands
+
 	make: compiles code
 	clear: deletes files
 	make run: executes prog
